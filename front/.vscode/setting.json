@@ -4,5 +4,6 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   },
-  "recommendations": ["esbenp.prettier-vscode"]
+  "recommendations": ["esbenp.prettier-vscode"],
+  "cSpell.words": ["budoux"]
 }
