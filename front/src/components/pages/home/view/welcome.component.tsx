@@ -9,16 +9,16 @@ export default function Welcome() {
   return (
     <>
       <MyHead pageName="Slackでログインして始める"></MyHead>
-      <Grid
-        container
-        alignItems="center"
-        justifyContent="center"
-        direction="column"
-      >
+      <Grid container alignItems="center" justifyContent="center" direction="column">
         <Box mx={4} maxWidth={600}>
           <WelcomeMessage></WelcomeMessage>
           <HowToUseAccordion></HowToUseAccordion>
-          <RegistrationButton appType="slack"></RegistrationButton>
+          <a
+            href="https://slack.com/oauth/v2/authorize?client_id=2085093365168.6109733478129&scope=channels:history,channels:write.invites,incoming-webhook,users:read,groups:history,groups:write.invites&user_scope="
+            target="_blank"
+          >
+            <RegistrationButton appType="slack"></RegistrationButton>
+          </a>
         </Box>
       </Grid>
     </>
