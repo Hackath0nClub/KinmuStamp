@@ -7,13 +7,16 @@ interface RegistrationButtonProps {
 
 const RegistrationButton: NextPage<RegistrationButtonProps> = ({ appType }) => {
   let content = "";
+  let href = "#";
 
   switch (appType) {
     case "google":
       content = "Googleで登録";
+      // [TODO] Google Authへのリンクを追加する
       break;
     case "slack":
       content = "Slackワークスペースに追加";
+      href = process.env.NEXT_PUBLIC_SLACK_AUTH_URI ?? "";
       break;
     default:
       content = "新規登録";
@@ -26,6 +29,7 @@ const RegistrationButton: NextPage<RegistrationButtonProps> = ({ appType }) => {
     <Box mt={4} justifyContent="end">
       <Stack my={2} direction="row" justifyContent="end" spacing={1}>
         <Button
+          href={href}
           variant="contained"
           color="primary"
           sx={{
