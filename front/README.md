@@ -7,6 +7,28 @@
 - `18.x`
 - nvmで管理すると便利です。
 
+### 設定値取り込み
+
+`front` 配下で実施
+
+`pwd`
+
+`> KinmuStamp/front`
+
+.envファイルを作成します
+
+`cp .env.example .env`
+
+Slackの認証URIを設定します
+
+`https://slack.com/oauth/v2/authorize?client_id=2085093365168.6109733478129&scope=channels:history,channels:write.invites,incoming-webhook,users:read,groups:history,groups:write.invites&user_scope=`
+
+```.env:.env
+NEXT_PUBLIC_SERVICE_NAME="KinmuStamp"
+NEXT_PUBLIC_SLACK_AUTH_URI="Slackの認証URI"
+NEXT_PUBLIC_PC_BREAK_POINT=900
+```
+
 ### Package取り込み
 
 - npmパッケージの取り込みを行います `npm ci`
