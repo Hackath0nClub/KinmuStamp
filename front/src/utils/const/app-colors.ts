@@ -1,7 +1,0 @@
-const DARK_APP_COLOR = {
-  CARD_BACKGROUND: "#15202b",
-  CARD_BACKGROUND_ACTIVE: "#192734",
-  TEXT: "#fff",
-};
-
-export default DARK_APP_COLOR;
