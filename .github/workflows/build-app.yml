@@ -1,0 +1,37 @@
+name: Build Next App
+
+on:
+  pull_request:
+    branches:
+      - master
+      - develop
+  push:
+    branches:
+      - master
+      - develop
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: npm-install
+        run: npm --prefix ./front ci ./front
+
+      - name: cp env
+        run: cp ./front/.env.example ./front/.env
+
+      - name: npm-lint
+        run: npm --prefix ./front run lint
+
+      - name: npm-build
+        run: npm --prefix ./front run build
