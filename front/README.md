@@ -21,8 +21,6 @@
 
 Slackの認証URIを設定します
 
-`https://slack.com/oauth/v2/authorize?client_id=2085093365168.6109733478129&scope=channels:history,channels:write.invites,incoming-webhook,users:read,groups:history,groups:write.invites&user_scope=`
-
 ```.env:.env
 NEXT_PUBLIC_SERVICE_NAME="KinmuStamp"
 NEXT_PUBLIC_SLACK_AUTH_URI="Slackの認証URI"
