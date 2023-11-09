@@ -7,12 +7,7 @@ export default function Header() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Typography
-            variant="h1"
-            fontSize="1.5rem"
-            component="div"
-            sx={{ flexGrow: 1 }}
-          >
+          <Typography variant="h1" fontSize="1.5rem" component="div" sx={{ flexGrow: 1 }}>
             {serviceName}
           </Typography>
         </Toolbar>
